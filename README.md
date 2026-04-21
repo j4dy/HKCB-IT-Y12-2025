@@ -4,15 +4,7 @@ HKCB-IT-Y12-2025
 This is the readme file.
 Put your name here after you read this.
 - Judy (I saw this)
-
-
-
-
-
-
-
-
-
+rene 
 hiihi
 i am rene lee 
 

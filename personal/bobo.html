@@ -1,2 +1,101 @@
 hellooo
+<br>
 |･ω･｀
+<br>
+｡•́︿•́｡
+<br>
+<svg width="200" height="200" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+  <circle cx="60" cy="60" r="25" fill="#A9A9A9" />
+  <circle cx="140" cy="60" r="25" fill="#A9A9A9" />
+  
+  <circle cx="100" cy="110" r="70" fill="#D3D3D3" />
+  
+  <path d="M100 40 Q100 60 100 80" stroke="#4F4F4F" stroke-width="8" stroke-linecap="round" fill="none" />
+  <path d="M85 45 Q90 60 90 75" stroke="#4F4F4F" stroke-width="4" stroke-linecap="round" fill="none" />
+  <path d="M115 45 Q110 60 110 75" stroke="#4F4F4F" stroke-width="4" stroke-linecap="round" fill="none" />
+
+  <circle cx="65" cy="110" r="18" fill="#1A1A1A" />
+  <circle cx="135" cy="110" r="18" fill="#1A1A1A" />
+  
+  <circle cx="70" cy="105" r="5" fill="white" />
+  <circle cx="140" cy="105" r="5" fill="white" />
+
+  <circle cx="100" cy="130" r="6" fill="#FFB6C1" />
+  
+  <path d="M90 145 Q100 155 110 145" stroke="#4F4F4F" stroke-width="2" fill="none" />
+</svg>
+
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+  /* 让蜜袋鼯整体晃脑袋 */
+  .glider {
+    transform-origin: center bottom;
+    animation: sway 3s ease-in-out infinite;
+  }
+
+  /* 晃头动画 */
+  @keyframes sway {
+    0%, 100% { transform: rotate(-5deg); }
+    50% { transform: rotate(5deg); }
+  }
+
+  /* 眨眼睛动画 */
+  .eye-pupil {
+    animation: blink 4s infinite;
+    transform-origin: center;
+  }
+
+  @keyframes blink {
+    0%, 90%, 100% { transform: scaleY(1); }
+    95% { transform: scaleY(0.1); } /* 快速闭眼 */
+  }
+
+  /* 动耳朵动画 */
+  .ear-left {
+    transform-origin: 60px 60px;
+    animation: twitch-l 2s infinite;
+  }
+  .ear-right {
+    transform-origin: 140px 60px;
+    animation: twitch-r 2s infinite;
+  }
+
+  @keyframes twitch-l {
+    0%, 80%, 100% { transform: rotate(0deg); }
+    90% { transform: rotate(-10deg); }
+  }
+  @keyframes twitch-r {
+    0%, 70%, 100% { transform: rotate(0deg); }
+    85% { transform: rotate(10deg); }
+  }
+</style>
+</head>
+<body>
+
+<svg width="300" height="300" viewBox="0 0 200 200">
+  <g class="glider">
+    <circle class="ear-left" cx="60" cy="60" r="25" fill="#A9A9A9" />
+    <circle class="ear-right" cx="140" cy="60" r="25" fill="#A9A9A9" />
+    
+    <circle cx="100" cy="110" r="70" fill="#D3D3D3" />
+    
+    <path d="M100 40 Q100 60 100 80" stroke="#4F4F4F" stroke-width="8" stroke-linecap="round" fill="none" />
+
+    <g class="eye-pupil">
+      <circle cx="65" cy="110" r="18" fill="#1A1A1A" />
+      <circle cx="135" cy="110" r="18" fill="#1A1A1A" />
+      <circle cx="70" cy="105" r="5" fill="white" />
+      <circle cx="140" cy="105" r="5" fill="white" />
+    </g>
+
+    <circle cx="100" cy="130" r="6" fill="#FFB6C1" />
+    <path d="M90 145 Q100 155 110 145" stroke="#4F4F4F" stroke-width="2" fill="none" />
+  </g>
+</svg>
+
+<p style="font-family: sans-serif; color: #ffdcdc;">uwu</p>
+
+</body>
+</html>

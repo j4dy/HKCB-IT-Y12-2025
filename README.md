@@ -9,13 +9,8 @@ Put your name here after you read this.
 - Angus ()i saw this
 - isaac
 - Jackie say halo
-
-Hinson(IGCSE May 7)
-
-
-
-
-Bobo
+- Hinson(IGCSE May 7)
+- Bobo
 
 
 We shall also make a class homepage at index.html

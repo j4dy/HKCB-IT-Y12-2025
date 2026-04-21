@@ -101,34 +101,37 @@
                 <h3>Isaac</h3>
             </a>
 <style>
-    .student-card {
-        /* 讓它變成一個盒子 */
+    /* 這是專屬於你的藍色盒子樣式 */
+    #hinson-box {
         display: block;
         background-color: #003366; /* 藍色背景 */
-        border: 2px solid #0073e6; /* 亮藍色邊框 */
-        border-radius: 10px;       /* 圓角 */
+        border: 2px solid #3399ff; /* 亮藍色邊框 */
+        border-radius: 12px;
         padding: 20px;
         margin: 15px 0;
-        text-decoration: none;     /* 移除超連結底線 */
-        color: #ffffff;            /* 文字顏色 */
-        transition: 0.3s;          /* 平滑過渡效果 */
+        text-decoration: none;
+        color: white;
+        transition: transform 0.2s;
     }
 
-    .student-card:hover {
-        background-color: #004080; /* 懸停時顏色變淺 */
-        border-color: #3399ff;     /* 邊框變亮 */
-        box-shadow: 0 0 15px rgba(51, 153, 255, 0.5); /* 加入藍色發光效果 */
-        transform: translateY(-5px); /* 輕微向上浮動 */
+    #hinson-box:hover {
+        background-color: #004080;
+        transform: scale(1.02); /* 稍微放大 */
     }
 
-    .student-card h3 {
+    #hinson-box h3 {
         margin: 0;
-        color: #99ccff;            /* 名字用淡藍色 */
+        color: #99ccff;
     }
 </style>
 
-<!-- 你的 HTML 代碼 -->
-<a href="personal/hinson.html" class="student-card">
+<!-- 其他學生的盒子（假設類別是 student-card，但沒有 ID） -->
+<a href="personal/other.html" class="student-card">
+    <h3>Other Student</h3>
+</a>
+
+<!-- 你的專屬藍色盒子：加入了 id="hinson-box" -->
+<a href="personal/hinson.html" class="student-card" id="hinson-box">
     <h3>Hinson Chan</h3>
     <p>The King Of Snake and The King Of Velocity</p>
 </a>

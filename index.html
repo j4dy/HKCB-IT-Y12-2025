@@ -1,13 +1,117 @@
-<html>
-This is our Y12 page
-<a href="personal/judy.html" >judy </a>
-<a href="personal/hinson.html" >Hinson</a>
-<a href="personal/angus.html">angus</a>
-<a href="personal/isaac.html">isaac</a>
-<a href="personal/bobo.html" >bobo </a>
-<a href="personal/hinson.html" >judy </a>
-<a href="personal/angus.html">angus</a>
-<a href="personal/isaac.html">isaac</a>
-<a href="personal/rene.html">rene</a>
-<a href="personal/bobo.html" >bobo </a>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Class Homepage</title>
+    <style>
+        :root {
+            --primary-color: #2c3e50;
+            --accent-color: #3498db;
+            --bg-color: #f4f7f6;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--bg-color);
+            color: #333;
+            line-height: 1.6;
+            margin: 0;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: #fff;
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+
+        header {
+            text-align: center;
+            border-bottom: 2px solid var(--bg-color);
+            padding-bottom: 20px;
+            margin-bottom: 30px;
+        }
+
+        h1 { color: var(--primary-color); }
+
+        .class-info { text-align: center; margin-bottom: 40px; }
+
+        .student-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+            gap: 20px;
+        }
+
+        .student-card {
+            background: #fff;
+            border: 1px solid #ddd;
+            padding: 20px;
+            border-radius: 8px;
+            text-align: center;
+            text-decoration: none;
+            color: var(--primary-color);
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .student-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 12px rgba(0,0,0,0.1);
+            border-color: var(--accent-color);
+        }
+
+        .student-card h3 { margin: 0; font-size: 1.1rem; }
+
+        footer {
+            text-align: center;
+            margin-top: 50px;
+            font-size: 0.9rem;
+            color: #777;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <header>
+            <h1>Class Homepage</h1>
+            <p>Welcome to our collective hub</p>
+        </header>
+
+        <section class="class-info">
+            <h2>Course: Intro to Web Development</h2>
+            <p>Explore the personal portfolios of our class members below.</p>
+        </section>
+
+        <div class="student-grid">
+            <a href="student1.html" class="student-card">
+                <h3>Alice Johnson</h3>
+            </a>
+            <a href="student2.html" class="student-card">
+                <h3>Bob Smith</h3>
+            </a>
+            <a href="student3.html" class="student-card">
+                <h3>Charlie Davis</h3>
+            </a>
+            <a href="student4.html" class="student-card">
+                <h3>Diana Prince</h3>
+            </a>
+            <a href="student5.html" class="student-card">
+                <h3>Edward Norton</h3>
+            </a>
+            <a href="student6.html" class="student-card">
+                <h3>Edwar666d Norton</h3>
+            </a>
+        </div>
+
+        <footer>
+            <p>&copy; 2026 Class Homepage | University Name</p>
+        </footer>
+    </div>
+
+</body>
 </html>

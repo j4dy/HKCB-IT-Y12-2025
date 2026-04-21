@@ -4,22 +4,18 @@ HKCB-IT-Y12-2025
 This is the readme file.
 Put your name here after you read this.
 - Judy (I saw this)
+- rene 
+- hiihi
+- Angus ()i saw this
+- isaac
+- Jackie say halo
 
--Angus ()i saw this
-
-
-
-
-
-
-
+Hinson(IGCSE May 7)
 
 
 
 
-i am rene 
-
-isaac
+Bobo
 
 
 We shall also make a class homepage at index.html

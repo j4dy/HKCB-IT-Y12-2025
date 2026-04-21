@@ -4,12 +4,11 @@ HKCB-IT-Y12-2025
 This is the readme file.
 Put your name here after you read this.
 - Judy (I saw this)
-
--Angus ()i saw this
-
-i am rene 
-
-isaac
+- rene 
+- hiihi
+- Angus ()i saw this
+- isaac
+- Jackie say halo
 
 Hinson(IGCSE May 7)
 

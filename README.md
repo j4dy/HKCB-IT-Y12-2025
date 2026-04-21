@@ -7,7 +7,7 @@ Put your name here after you read this.
 
 
 
-Jackie
+Jackie say halo
 
 
 We shall also make a class homepage at index.html

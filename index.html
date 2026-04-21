@@ -100,8 +100,39 @@
             <a href="personal/isaac.html" class="student-card">
                 <h3>Isaac</h3>
             </a>
-            <a href="personal/hinson.html" class="student-card">
-                <h3>Hinson Chan</h3>
+<style>
+    .student-card {
+        /* 讓它變成一個盒子 */
+        display: block;
+        background-color: #003366; /* 藍色背景 */
+        border: 2px solid #0073e6; /* 亮藍色邊框 */
+        border-radius: 10px;       /* 圓角 */
+        padding: 20px;
+        margin: 15px 0;
+        text-decoration: none;     /* 移除超連結底線 */
+        color: #ffffff;            /* 文字顏色 */
+        transition: 0.3s;          /* 平滑過渡效果 */
+    }
+
+    .student-card:hover {
+        background-color: #004080; /* 懸停時顏色變淺 */
+        border-color: #3399ff;     /* 邊框變亮 */
+        box-shadow: 0 0 15px rgba(51, 153, 255, 0.5); /* 加入藍色發光效果 */
+        transform: translateY(-5px); /* 輕微向上浮動 */
+    }
+
+    .student-card h3 {
+        margin: 0;
+        color: #99ccff;            /* 名字用淡藍色 */
+    }
+</style>
+
+<!-- 你的 HTML 代碼 -->
+<a href="personal/hinson.html" class="student-card">
+    <h3>Hinson Chan</h3>
+    <p>The King Of Snake and The King Of Velocity</p>
+</a>
+
             </a>
             <a href="personal/bobo.html" class="student-card">
                 <h3>bobo :D!!</h3>

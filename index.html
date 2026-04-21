@@ -91,7 +91,7 @@
             <a href="student1.html" class="student-card">
                 <h3>Alice Johnson</h3>
             </a>
-            <a href="student2.html" class="student-card">
+            <a href="personal/rene.html" class="student-card">
                 <h3>Bob Smith</h3>
             </a>
             <a href="personal/angus.html" class="student-card">
@@ -100,8 +100,46 @@
             <a href="personal/isaac.html" class="student-card">
                 <h3>Isaac</h3>
             </a>
-            <a href="hinson.html" class="12Alpha">
-                <h3>Hinson Chan</h3>
+<style>
+    /* 這是專屬於你的藍色盒子樣式 */
+    #hinson-box {
+        display: block;
+        background-color: #003366; /* 藍色背景 */
+        border: 2px solid #3399ff; /* 亮藍色邊框 */
+        border-radius: 12px;
+        padding: 20px;
+        margin: 15px 0;
+        text-decoration: none;
+        color: white;
+        transition: transform 0.2s;
+    }
+
+    #hinson-box:hover {
+        background-color: #004080;
+        transform: scale(1.02); /* 稍微放大 */
+    }
+
+    #hinson-box h3 {
+        margin: 0;
+        color: #99ccff;
+    }
+    #hinson-box h4 {
+        margin: 0;
+        color: #99ccff;
+    }
+</style>
+
+<!-- 其他學生的盒子（假設類別是 student-card，但沒有 ID） -->
+<a href="personal/other.html" class="student-card">
+    <h3>Other Student</h3>
+</a>
+
+<!-- 你的專屬藍色盒子：加入了 id="hinson-box" -->
+<a href="personal/hinson.html" class="student-card" id="hinson-box">
+    <h3>Hinson Chan</h3>
+    <p><h4>Click to enter</h4></p>
+</a>
+
             </a>
             <a href="personal/bobo.html" class="student-card">
                 <h3>bobo :D!!</h3>

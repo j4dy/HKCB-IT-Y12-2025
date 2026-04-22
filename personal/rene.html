@@ -6,11 +6,97 @@
     <title>Document</title>
 </head>
 <style>
-    body{background-color: rgb(253, 218, 218);}
+    body{
+        background-color: #f5e6d3;
+    margin: auto;
+        }
+
+        /* header */
+
+        header {
+            background-color: #caaf96c5;
+            text-align: center;
+            padding: 40px 20px;
+            margin-bottom: 30px;
+        }
+
+        header .x {
+            width: 100%;
+            height: 3px;
+            background-color: #82614a;
+        }
+
+    header h1 {
+        font-weight: 20px;
+        color: #faeeee;
+        text-align: center;
+    }
+    /* navigation  */
+    nav {
+        background-color: white;
+        box-shadow: 0 4px #d6bfa6;
+        margin-bottom: 40px;
+        position: static;
+        top: 0;
+        z-index: 100;
+    }
+
+    nav ul{
+        display: flex;
+        justify-content: center;
+        list-style-type: none;
+        padding: 0;
+        }
+
+        nav li{
+            margin: 0;
+        }
+
+        nav a {
+            display: block;
+            padding: 18px 30px;
+            text-decoration: none;
+            color: #7a553a;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            border-bottom: 3px solid transparent;
+        }
+
+        nav a:hover {
+            background-color: #f4f1ea;
+            color: #b48459;
+            border-bottom: 3px solid #3b2a22;
+        }
+
+        /* home page */
+        div h2{
+            text-align: center;
+            color: #382a22;
+        }
+    
 </style>
+
 <body>
-    <h1>this is my website</h1>
-    <a href="https://www.youtube.com/watch?v=lQQcmjns-S8">peppa pig</a>
+    <header>
+    <h1>This is my website</h1> 
+    <div class="x"></div>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="#home">Home page</a></li>
+            <li><a href=#introduction>My Introduction </a></li>        
+            <li><a href=#competition>Competition</a></li>        
+            <li><a href=#hobbies>Hobbies </a></li>            
+        </ul>
+    </nav>
+
+    <div>
+        <h2>My fav cartoons</h2>
+        <img class="pikachu" src="rene_photo/Pikachu1.1.jpg" alt="pikachu">
+    </div>
+
+    <a href="https://www.youtube.com/watch?v=lQQcmjns-S8">peppa pig</a> 
     <a href="c:\Users\Y12\Downloads\pikachu reaction.jfif">photo</a>
 </body>
 </html>

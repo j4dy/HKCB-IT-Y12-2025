@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="zh-Hant">
 <head>
@@ -6,94 +5,233 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hinson, The King Of Snake & Velocity</title>
     <style>
+        /* 背景流動動畫 */
+        @keyframes gradientBG {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        /* 容器浮現動畫 */
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* 掃描流光動畫 */
+        @keyframes scanLight {
+            0% { left: -100%; }
+            50%, 100% { left: 100%; }
+        }
+
+        /* 標題發光效果 */
+        @keyframes titleGlow {
+            0%, 100% { text-shadow: 0 0 10px #3399ff, 0 0 20px #3399ff; }
+            50% { text-shadow: 0 0 25px #99ccff, 0 0 40px #0073e6; }
+        }
+
         body {
             font-family: 'Segoe UI', Arial, sans-serif;
-            /* 使用深藍色背景 */
-            background-color: #001a33; 
+            background: linear-gradient(-45deg, #000814, #001a33, #000d1a, #001a33);
+            background-size: 400% 400%;
+            animation: gradientBG 12s ease infinite;
             color: #ffffff;
             display: flex;
             justify-content: center;
-            padding: 50px 20px;
+            align-items: center;
+            min-height: 100vh;
             margin: 0;
+            padding: 20px;
+            overflow: hidden;
         }
+
+        #starfield {
+            position: fixed;
+            top: 0; left: 0; width: 100%; height: 100%;
+            z-index: -1; pointer-events: none;
+        }
+
         .container {
-            background-color: #002b55; /* 稍微淺一點的藍色容器 */
+            background-color: rgba(0, 43, 85, 0.85);
             padding: 30px;
-            border-radius: 12px;
+            border-radius: 16px;
             max-width: 500px;
             width: 100%;
             border: 1px solid #0059b3;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+            backdrop-filter: blur(10px); 
+            animation: fadeInUp 1s ease-out;
+            position: relative;
+            z-index: 1;
+            transition: transform 0.3s ease;
         }
+
+        /* 容器滑動位移感 */
+        .container:hover {
+            transform: translateY(-5px);
+        }
+
         h1 {
             color: #3399ff;
             margin-bottom: 10px;
             text-align: center;
+            font-size: 1.8rem;
+            animation: titleGlow 3s ease-in-out infinite;
         }
-        /* 藍色分割線樣式 */
+
         hr {
-            border: 0;
-            height: 2px;
-            background: #0073e6;
-            margin: 20px 0;
+            border: 0; height: 2px;
+            background: linear-gradient(90deg, transparent, #0073e6, transparent);
+            margin: 25px 0;
         }
-        .section {
-            padding: 10px 0;
-        }
+
         .highlight {
             color: #99ccff;
             font-weight: bold;
+            letter-spacing: 1px;
         }
+
+        /* 更有生命力的 Event Tag */
         .event-tag {
-            background-color: #004080;
-            padding: 10px;
+            background-color: rgba(0, 64, 128, 0.5);
+            padding: 15px;
             border-left: 4px solid #3399ff;
+            margin-top: 15px;
+            border-radius: 4px;
+            position: relative;
+            overflow: hidden; /* 為了隱藏流光 */
+            transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+
+        /* 流光效果 */
+        .event-tag::after {
+            content: "";
+            position: absolute;
+            top: 0; left: -100%;
+            width: 50%; height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.1), transparent);
+            animation: scanLight 4s infinite;
+        }
+
+        .event-tag:hover {
+            background-color: rgba(0, 74, 153, 0.7);
+            border-left-width: 10px;
+            padding-left: 20px;
+            box-shadow: 0 0 15px rgba(51, 153, 255, 0.4);
+        }
+
+        .event-tag p { margin: 8px 0; }
+
+        .phonetic-box {
+            background: rgba(0, 13, 26, 0.7);
+            padding: 10px;
+            border-radius: 6px;
+            font-family: 'Courier New', monospace;
+            font-size: 0.85rem;
+            color: #80bfff;
+            border: 1px inset #003366;
             margin-top: 10px;
+            position: relative;
+            transition: border 0.3s;
+        }
+
+        .phonetic-box:hover {
+            border: 1px solid #3399ff;
+            box-shadow: inset 0 0 10px rgba(51, 153, 255, 0.2);
+        }
+
+        .ai-section {
+            margin-top: 20px;
+            font-size: 0.8rem;
+            text-align: center;
+            opacity: 0.7;
+            letter-spacing: 2px;
         }
     </style>
 </head>
 <body>
+
+<canvas id="starfield"></canvas>
 
 <div class="container">
     <div class="section">
         <h1>Hinson - "The King Of Snake <br>& The King Of Velocity"</h1>
     </div>
 
-    <hr> <!-- 藍色分割線 -->
+    <hr>
 
     <div class="section">
-        <p class="highlight">Upcoming Events:</p>
+        <p class="highlight">🚀 Upcoming Events:</p>
         <div class="event-tag">
-            IGCSE ICT Exam Paper 1: <strong>May 7</strong><p>
-            <p>
-            IAL Math Pure 1: <strong>May 8</strong>
-            </p>
-            <p>
-            IAL Physics Unit 1: <strong>May 8</strong>
-            </p>
-            IGCSE ICT Exam Paper 2: <strong>Early June</strong>
-            </p>
-            <p>
-            IELTS: <strong>Summer Holidays</strong>
-            </p>
+            <p>IGCSE ICT Paper 1: <strong>May 7</strong></p>
+            <p>IAL Math Pure 1: <strong>May 8</strong></p>
+            <p>IAL Physics Unit 1: <strong>May 8</strong></p>
+            <p>IGCSE ICT Paper 2: <strong>Early June</strong></p>
+            <p>IELTS: <strong>Summer Holidays</strong></p>
         </div>
     </div>
 
-    <hr> <!-- 藍色分割線 -->
+    <hr>
 
     <div class="section">
         <p>I love using the <span class="highlight">Phonetic Alphabet</span>.</p>
-        <p style="font-family: monospace; font-size: 0.9rem; color: #80bfff;">
-            Alpha - Bravo - Charlie - Delta... GO LEARN IT URSELF
-        </p>
+        <div class="phonetic-box">
+            Alpha - Bravo - Charlie - Delta... <br>
+            [ SYSTEM: GO LEARN IT URSELF ]
+        </div>
     </div>
-    <div class="ai section">
-        <p>This Prompt Is Generated By <span class="highlight">Gemini</span>.</p>
-        <p style="font-family: monospace; font-size: 0.9rem; color: #80bfff;">
-        </p>
+
+    <div class="ai-section">
+        <p>SYSTEM STATUS: <span style="color:#00ff00;">ONLINE</span> // BY GEMINI</p>
     </div>
 </div>
 
+<script>
+    const canvas = document.getElementById('starfield');
+    const ctx = canvas.getContext('2d');
+    let stars = [];
+
+    function resize() {
+        canvas.width = window.innerWidth;
+        canvas.height = window.innerHeight;
+    }
+
+    class Star {
+        constructor() { this.init(); }
+        init() {
+            this.x = Math.random() * canvas.width;
+            this.y = Math.random() * canvas.height;
+            this.size = Math.random() * 1.5;
+            this.speed = Math.random() * 0.05;
+            this.opacity = Math.random();
+            this.direction = Math.random() > 0.5 ? 1 : -1;
+        }
+        draw() {
+            this.opacity += this.speed * this.direction;
+            if (this.opacity > 1 || this.opacity < 0) this.direction *= -1;
+            ctx.fillStyle = `rgba(255, 255, 255, ${this.opacity})`;
+            ctx.beginPath();
+            ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
+            ctx.fill();
+        }
+    }
+
+    function setup() {
+        resize();
+        stars = [];
+        for (let i = 0; i < 200; i++) stars.push(new Star());
+    }
+
+    function animate() {
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+        stars.forEach(star => star.draw());
+        requestAnimationFrame(animate);
+    }
+
+    window.addEventListener('resize', setup);
+    setup();
+    animate();
+</script>
+
 </body>
 </html>
-

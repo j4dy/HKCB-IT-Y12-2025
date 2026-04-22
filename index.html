@@ -88,8 +88,8 @@
         </section>
 
         <div class="student-grid">
-            <a href="personal/jackie.html" class="student-card">
-                <h3>jackie</h3>
+            <a href="student1.html" class="student-card">
+                <h3>Alice Johnson</h3>
             </a>
             <a href="personal/rene.html" class="student-card">
                 <h3>rene</h3>
@@ -100,42 +100,99 @@
             <a href="personal/isaac.html" class="student-card">
                 <h3>Isaac</h3>
             </a>
-<style>
-    /* 這是專屬於你的藍色盒子樣式 */
-    #hinson-box {
-        display: block;
-        background-color: #003366; /* 藍色背景 */
-        border: 2px solid #3399ff; /* 亮藍色邊框 */
-        border-radius: 12px;
-        padding: 20px;
-        margin: 15px 0;
-        text-decoration: none;
-        color: white;
-        transition: transform 0.2s;
-    }
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hinson - Click to enter</title>
+    <style>
+        /* 動態漸變背景 - 象徵 Velocity */
+        @keyframes gradientBG {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
 
-    #hinson-box:hover {
-        background-color: #004080;
-        transform: scale(1.05); /* 稍微放大 */
-    }
+        /* 呼吸發光動畫 */
+        @keyframes pulseGlow {
+            0% { box-shadow: 0 0 10px rgba(51, 153, 255, 0.4); }
+            50% { box-shadow: 0 0 25px rgba(51, 153, 255, 0.8); }
+            100% { box-shadow: 0 0 10px rgba(51, 153, 255, 0.4); }
+        }
 
-    #hinson-box h3 {
-        margin: 0;
-        color: #99ccff;
-    }
-    #hinson-box h4 {
-        margin: 0;
-        color: #99ccff;
-    }
-</style>
+        body {
+            font-family: 'Segoe UI', Arial, sans-serif;
+            background: linear-gradient(-45deg, #001a33, #003366, #000d1a);
+            background-size: 400% 400%;
+            animation: gradientBG 10s ease infinite;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            color: white;
+        }
 
-<!-- 你的專屬藍色盒子：加入了 id="hinson-box" -->
-<a href="personal/hinson.html" class="student-card" id="hinson-box">
-    <h3>Hinson Chan</h3>
-    <p><h4>Click to enter</h4></p>
-</a>
+        /* 這是你的專屬藍色盒子樣式 */
+        #hinson-box {
+            display: block;
+            background-color: #003366; 
+            border: 2px solid #3399ff; 
+            border-radius: 12px;
+            padding: 40px; /* 加大間距讓它更有氣勢 */
+            text-decoration: none;
+            color: white;
+            text-align: center;
+            transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            animation: pulseGlow 3s infinite;
+            min-width: 250px;
+        }
 
-            </a>
+        #hinson-box:hover {
+            background-color: #004080;
+            transform: scale(1.1); /* 懸停放大 */
+            border-color: #99ccff;
+            box-shadow: 0 0 40px rgba(51, 153, 255, 0.6);
+        }
+
+        #hinson-box h3 {
+            margin: 0;
+            font-size: 2rem;
+            color: #99ccff;
+            letter-spacing: 2px;
+        }
+
+        #hinson-box h4 {
+            margin: 10px 0 0 0;
+            font-size: 1rem;
+            color: #3399ff;
+            text-transform: uppercase;
+            opacity: 0.8;
+        }
+
+        /* 裝飾性的小文字 */
+        .footer-text {
+            position: absolute;
+            bottom: 20px;
+            font-family: monospace;
+            color: #004080;
+            font-size: 0.8rem;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- 你的專屬入口盒子 -->
+    <a href="personal/hinson.html" id="hinson-box">
+        <h3>Hinson Chan</h3>
+        <h4>Click to enter</h4>
+    </a>
+
+    <div class="footer-text">
+        STATUS: VELOCITY ENABLED // SNAKE MODE READY
+    </div>
+
+</body>
+
             <a href="personal/bobo.html" class="student-card">
                 <h3>bobo :D!!</h3>
             </a>

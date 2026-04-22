@@ -7,7 +7,7 @@
 </head>
 <style>
     body{background-color: rgb(253, 218, 218);}
-
+    /* navigation  */
     nav {
         background-color: white;
         box-shadow: 0 4px pink;
@@ -16,6 +16,33 @@
         top: 0;
         z-index: 100;
     }
+
+    nav ul{
+        display: flex;
+        justify-content: center;
+        list-style-type: none;
+        padding: 0;
+        }
+
+        nav li{
+            margin: 0;
+        }
+
+        nav a {
+            display: block;
+            padding: 18px 30px;
+            text-decoration: none;
+            color: red;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            border-bottom: 3px solid transparent;
+        }
+
+        nav a:hover {
+            background-color: aqua;
+            color: blue;
+            border-bottom: 3px solid green;
+        }
     
 </style>
 <body>

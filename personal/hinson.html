@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="zh-Hant">
 <head>
@@ -6,49 +5,122 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hinson, The King Of Snake & Velocity</title>
     <style>
+        /* 定義背景流動動畫 */
+        @keyframes gradientBG {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        /* 定義容器浮現動畫 */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* 定義標題發光效果 */
+        @keyframes titleGlow {
+            0%, 100% { text-shadow: 0 0 10px #3399ff, 0 0 20px #3399ff; }
+            50% { text-shadow: 0 0 25px #99ccff, 0 0 40px #0073e6; }
+        }
+
         body {
             font-family: 'Segoe UI', Arial, sans-serif;
-            /* 使用深藍色背景 */
-            background-color: #001a33; 
+            /* 動態漸變背景，呼應 Velocity 主題 */
+            background: linear-gradient(-45deg, #001a33, #003366, #001226, #002b55);
+            background-size: 400% 400%;
+            animation: gradientBG 12s ease infinite;
             color: #ffffff;
             display: flex;
             justify-content: center;
-            padding: 50px 20px;
+            align-items: center;
+            min-height: 100vh;
             margin: 0;
+            padding: 20px;
+            overflow-x: hidden;
         }
+
         .container {
-            background-color: #002b55; /* 稍微淺一點的藍色容器 */
+            background-color: rgba(0, 43, 85, 0.9); /* 加入透明度 */
             padding: 30px;
-            border-radius: 12px;
+            border-radius: 16px;
             max-width: 500px;
             width: 100%;
             border: 1px solid #0059b3;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+            backdrop-filter: blur(10px); /* 磨砂玻璃效果 */
+            animation: fadeInUp 1s ease-out;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
+
+        .container:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(0, 115, 230, 0.3);
+        }
+
         h1 {
             color: #3399ff;
             margin-bottom: 10px;
             text-align: center;
+            font-size: 1.8rem;
+            animation: titleGlow 3s ease-in-out infinite;
         }
-        /* 藍色分割線樣式 */
+
         hr {
             border: 0;
             height: 2px;
-            background: #0073e6;
-            margin: 20px 0;
+            background: linear-gradient(90deg, transparent, #0073e6, transparent);
+            margin: 25px 0;
         }
-        .section {
-            padding: 10px 0;
-        }
+
         .highlight {
             color: #99ccff;
             font-weight: bold;
+            letter-spacing: 1px;
         }
+
         .event-tag {
-            background-color: #004080;
-            padding: 10px;
+            background-color: rgba(0, 64, 128, 0.5);
+            padding: 15px;
             border-left: 4px solid #3399ff;
+            margin-top: 15px;
+            border-radius: 4px;
+            transition: all 0.3s ease;
+        }
+
+        .event-tag:hover {
+            background-color: #004a99;
+            border-left: 10px solid #99ccff;
+            padding-left: 20px;
+        }
+
+        .event-tag p {
+            margin: 8px 0;
+        }
+
+        /* 底部文字樣式 */
+        .phonetic-box {
+            background: #000d1a;
+            padding: 10px;
+            border-radius: 6px;
+            font-family: 'Courier New', monospace;
+            font-size: 0.85rem;
+            color: #80bfff;
+            border: 1px inset #003366;
             margin-top: 10px;
+        }
+
+        .ai-section {
+            margin-top: 20px;
+            font-size: 0.8rem;
+            text-align: center;
+            opacity: 0.7;
         }
     </style>
 </head>
@@ -59,41 +131,35 @@
         <h1>Hinson - "The King Of Snake <br>& The King Of Velocity"</h1>
     </div>
 
-    <hr> <!-- 藍色分割線 -->
+    <hr>
 
     <div class="section">
-        <p class="highlight">Upcoming Events:</p>
+        <p class="highlight">🚀 Upcoming Events:</p>
         <div class="event-tag">
-            IGCSE ICT Exam Paper 1: <strong>May 7</strong><p>
-            <p>
-            IAL Math Pure 1: <strong>May 8</strong>
-            </p>
-            <p>
-            IAL Physics Unit 1: <strong>May 8</strong>
-            </p>
-            IGCSE ICT Exam Paper 2: <strong>Early June</strong>
-            </p>
-            <p>
-            IELTS: <strong>Summer Holidays</strong>
-            </p>
+            <p>IGCSE ICT Paper 1: <strong>May 7</strong></p>
+            <p>IAL Math Pure 1: <strong>May 8</strong></p>
+            <p>IAL Physics Unit 1: <strong>May 8</strong></p>
+            <p>IGCSE ICT Paper 2: <strong>Early June</strong></p>
+            <p>IELTS: <strong>Summer Holidays</strong></p>
         </div>
     </div>
 
-    <hr> <!-- 藍色分割線 -->
+    <hr>
 
     <div class="section">
         <p>I love using the <span class="highlight">Phonetic Alphabet</span>.</p>
-        <p style="font-family: monospace; font-size: 0.9rem; color: #80bfff;">
-            Alpha - Bravo - Charlie - Delta... GO LEARN IT URSELF
-        </p>
+        <div class="phonetic-box">
+            Alpha - Bravo - Charlie - Delta... <br>
+            [ SYSTEM: GO LEARN IT URSELF ]
+        </div>
     </div>
-    <div class="ai section">
-        <p>This Prompt Is Generated By <span class="highlight">Gemini</span>.</p>
-        <p style="font-family: monospace; font-size: 0.9rem; color: #80bfff;">
-        </p>
+
+    <div class="ai-section">
+        <p>This Prompt Is Generated By <span class="highlight">Gemini</span></p>
     </div>
 </div>
 
 </body>
 </html>
+
 

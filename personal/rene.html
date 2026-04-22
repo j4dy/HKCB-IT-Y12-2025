@@ -6,11 +6,69 @@
     <title>Document</title>
 </head>
 <style>
-    body{background-color: rgb(253, 218, 218);}
+    body{
+        background-color: #f5e6d3;
+    margin: auto;
+        }
+
+    header h1 {
+        font-weight: 20px;
+        color: grey;
+        text-align: center;
+    }
+    /* navigation  */
+    nav {
+        background-color: white;
+        box-shadow: 0 4px #d6bfa6;
+        margin-bottom: 40px;
+        position: static;
+        top: 0;
+        z-index: 100;
+    }
+
+    nav ul{
+        display: flex;
+        justify-content: center;
+        list-style-type: none;
+        padding: 0;
+        }
+
+        nav li{
+            margin: 0;
+        }
+
+        nav a {
+            display: block;
+            padding: 18px 30px;
+            text-decoration: none;
+            color: #7a553a;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            border-bottom: 3px solid transparent;
+        }
+
+        nav a:hover {
+            background-color: #f4f1ea;
+            color: #b48459;
+            border-bottom: 3px solid #3b2a22;
+        }
+    
 </style>
+
 <body>
+    <header>
     <h1>this is my website</h1>
-    <a href="https://www.youtube.com/watch?v=lQQcmjns-S8">peppa pig</a>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href=#demo>box </a></li>        
+            <li><a href=#xxxx>xxxx</a></li>        
+            <li><a href=#foot>footer </a></li>            
+        </ul>
+    </nav>
+    <a href="https://www.youtube.com/watch?v=lQQcmjns-S8">peppa pig</a> 
     <a href="c:\Users\Y12\Downloads\pikachu reaction.jfif">photo</a>
 </body>
 </html>

@@ -14,40 +14,72 @@ body {
 
 
 /* Header */
-header {
+    header {
         text-align: center;
         text-decoration: underline;
-}
+    }
 
-header .y{
-    width:80%;
-    height: 5px;
-    color: rgb(219, 21, 21);
-}
+    header .y{
+        width:80%;
+        height: 5px;
+        color: rgb(219, 21, 21);
+    }
 
-.cartoon {
-    display: flex;
-}
+/* Image */
+    .cartoon {
+        display: flex;
+    }
 
-div h2{
-    text-align: center;
-}
+    div h2{
+        text-align: center;
+    }
 
 
-.snoopy {
+    .snoopy {
         height: 30%;
         width: 47%;
-}
+    }
 
-.pooh {
+    .pooh {
         height: 30%;
         width: 47%;
-}
+    }
 
-nav {
-    background-color: rgb(127, 176, 231, 0.15);
-    position: static;
-}
+    nav {
+        background-color: rgba(162, 167, 241, 0.151);
+        box-shadow: 0 4px 12px rgba(179, 172, 172, 0.2);
+        margin-bottom: 40px;
+        position: static;
+        top: 0;
+        z-index: 100;
+    }
+
+    nav ul {
+        display: flex;
+        justify-content: center;
+        list-style-type: none;
+        padding: 0;
+    }
+
+    nav li {
+        margin: 0;
+    }
+
+    nav a {
+        display: block;
+        padding: 18px 30px;
+        text-decoration: none;
+        color: #333;
+        font-weight: 600;
+        transition: all 0.3s ease;
+        border-bottom: 3px solid transparent;
+    }
+
+    nav a:hover {
+        background-color: #f0f5ff;
+        color: #02000a;
+        border-bottom: 3px solid #6b5eb4;
+    }
 
 
 

@@ -3,8 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>resume</title>
+    <link rel="icon" href="./photos/Capture.PNG" type="image/x-icon">
+    <title>aaaa</title>
     <style>
+        .agroi{
+            width: 200px;
+            height: 100px;
+            background-color: white;
+            color: rgb(26, 22, 22);
+            padding: 10px;
+            margin: 15px 0;
+            border-radius: 5px;
+            align-items: center;
+            justify-content: center;
+            font-size: 14px;
+            transition: 5s;
+        }
+        .agroi:hover{
+            width:100%;
+            transform: rotate(220deg);
+            animation: spin 2s linear infinite;
+        }
         .pic{
             transform: translate(190%,90%)
         }
@@ -20,7 +39,78 @@
         tr td{
             border: 1px black solid;
         }
+        :root{
+            --speed-mult:1;
+            --spin-angle: 360deg;
+        }
+        .box-small{
+            width: 200px;
+            height: 100px;
+            background-color: #9b59b6;
+            color: white;
+            padding: 10px;
+            margin: 15px 0;
+            border-radius: 5px;
+            align-items: center;
+            justify-content: center;
+            font-size: 14px;
+            transition: .5s;
+            animation: spin calc(0.1s / var(--speed-mult)) linear infinite;
+        }
+        
+        .box-small:hover{
+            width: 75%;
+        }
+
+        .box-medium{
+            width: 70%;
+            height: 100px;
+            background-color: #1abc9c;
+            color: white;
+            padding: 10px;
+            margin: 15px 0;
+            border-radius: 5px;
+            align-items: center;
+            justify-content: center;
+            animation: spin calc(1s / var(--speed-mult)) linear infinite;
+        }
+
+        .box-large{
+            width: 15cm;
+            height: 100px;
+            background-color: #e74c3c;
+            color: white;
+            padding: 10px;
+            margin: 15px 0;
+            border-radius: 5px;
+            align-items: center;
+            justify-content: center;
+            font-size: 16pt;
+            animation: spin calc(0.5s / var(--speed-mult)) linear infinite;
+        }
+
+        @keyframes spin {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(var(--spin-angle)); }
+        }
+    
     </style>
+
+    <script>
+        window.onload = function() {
+            const slider = document.getElementById('speedSlider');
+            const turboCheck = document.getElementById('turboCheck');
+
+            slider.addEventListener('input', (e) => {
+                document.documentElement.style.setProperty('--speed-mult', e.target.value);
+            });
+
+            turboCheck.addEventListener('change', (e) => {
+                const angle = e.target.checked ? '3600deg' : '360deg';
+                document.documentElement.style.setProperty('--spin-angle', angle);
+            });
+        };
+    </script>
 </head>
 
 
@@ -34,75 +124,40 @@
                 <img src="./photos/Untitled.png" style="width: 150px;">
             </div>
             <h1 style="text-align: left; padding-left: 7.5%;">Isaac Tong</h1> 
-            <p style="text-align: left; padding-left: 7.5%;">my resume</p>
+            <p style="text-align: left; padding-left: 7.5%;">aaaaaaaaaaa</p>
+        </div>
+            <h2>Really nice vid</h2>
+            <list>
+                <ul>
+                    <a href="https://www.instagram.com/reel/DUfPLkLEjC8/?utm_source=ig_web_copy_link&igsh=NTc4MTIwNjQ2YQ==" target="aaaaaaaaa">vid</a>
+                </ul>
+            </list>
+
+            <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+
+        <div>
+            <div class="box-small">aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</div>
+            <div class="box-medium">aaaaaaaaaaaaaaa</div>
+            <div class="box-large">aaaaaaaaaaaaaaaaaa</div>
         </div>
 
-        <!-- education -->
+
+        <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
         
-        <div>
-            <h2>Education:</h2>
-            <list>
-                <ul>
-                    <li>Graduated 06/2019: St. Joseph Anglo-Chinese Primary School, Kowlooon, Hong Kong</li>
-                    <li>Current: HKBC, Kowloon, Hong Kong</li>
-                </ul>
-            </list>
+        <div style="margin-bottom: 20px;">
+            <label for="speedSlider">Spin Speed Control:</label>
+            <input type="range" id="speedSlider" min="0.1" max="10" step="0.1" value="1">
+            
+            <label style="margin-left: 20px;">
+                <input type="checkbox" id="turboCheck"> spin faster
+            </label>
         </div>
 
-        <!-- intern experience -->
-        <div>
-            <h2>Internship Experience:</h2>
-            <list>
-                <ul>
-                    <li>(job)</li>
-                </ul>
-            </list>
-        </div>
 
-        <!-- Skills -->
-        <div>
-            <h2>Skills:</h2>
-            <list>
-                <ul>
-                    <li>Computer Skills: Html, Lightroom, Premier Pro</li>
-                    <li>Language: Cantonese, English, German(Duolingo level 9)</li>
-                    <li>Photography</li>
-                </ul>
-            </list>
-        </div>
+        <br><br><br><br><br><br><br><br><br><br><br><br>
 
-        <!-- Activities -->
-        <div>
-            <h2>Extracurricular Activities:</h2>
-            <list>
-                <ul>
-                    <li>Hong Kong Grade A Volleyball Interschool competition</li>
-                </ul>
-            </list>
-        </div>
+        <div class="agroi">wwwwwww</div>
 
-        <!-- Achievements -->
-        <div>
-            <h2>Achievements:</h2>
-            <list>
-                <ul>
-                    <li>igcse grade 9 in math and chinese</li>
-                </ul>
-            </list>
-        </div>
-
-        <!-- Statement of Intention -->
-        <div>
-            <h2>Statement of Intentions:</h2>
-            <list>
-                <ul>
-                    <li><a href="./statemetn1.html" target="page">Intention 1</a></li>
-                    <li><a href="./statement2.html" target="page">Intention 2</a></li>
-                </ul>
-            </list>
-        </div>
-
-        <br><br><br>
 
         <!-- Portfolio -->
         <div style="margin: 2%;">
@@ -137,8 +192,8 @@
                     <td><a href="./photos/A6704307.JPG" target="pic">Picture 6</a></td>
                 </tr>
             </table>
-        </d
-
+        </div>
+        <br><br><br><br><br><br><br><br><br>
     </div>    
 </body> 
 </html>

@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>jackie's personal</title>
 </head>
+<link rel="icon" type="jpg" href="jackie's/snoopy favicon.jpg">
 
 <style>
 body {
@@ -74,6 +75,7 @@ body {
 
     div h3{
         text-align: center;
+        background-color: aliceblue;
     }
 
 
@@ -87,8 +89,43 @@ body {
         width: 47%;
     }
 
+/* Interest */
+    .interest {
+        background-color:aliceblue ;
+        margin-top: 15px;
+    }
 
+    .interest h2 {
+        text-align: center;
+    }
 
+    .video-container {
+        position: relative;
+        padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+        height: 0;
+        overflow: hidden;
+    }
+
+    .video-container iframe {
+        position: absolute;
+        top: 0;
+        left: 5%;
+        right: 5%;
+        width: 90%;
+        height: 90%;
+    }
+
+    iframe {
+        border-radius: 12px;
+        box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+        width: 100%;
+        aspect-ratio: 16 / 9;
+        height: auto;
+    }
+
+    .idol {
+        background-color: aliceblue;
+    }   
 
 </style>
 <body>
@@ -104,10 +141,10 @@ body {
         <div>
             <nav>
         <ul>
-            <li><a href="#home">Home</a></li>
-            <li><a href="#demo">Box Model Demo</a></li>
-            <li><a href="#xxxx">XXXX</a></li>
-            <li><a href="#foot">Footer</a></li>
+            <li><a href="">SU members</a></li>
+            <li><a href="">Interest</a></li>
+            <li><a href="">My Idol</a></li>
+            <li><a href="">Footer</a></li>
         </ul>
     </nav>
 
@@ -118,8 +155,29 @@ body {
        <img class=pooh src="jackie's/poohpooh.jpg" alt="PoohPooh">
     </div>  
 
+<!-- Interest -->
+    <div class="interest">
+        <h2>My Interest</h2>
+        <p>One of my biggest interest...SOFTBALL! <br>
+           One of my competition video:</p>
+        <div class="video-container">
+            <iframe 
+            src="https://www.youtube.com/embed/X_v43S3yuTk?si=yAkBgvoTMaqiRpwd&amp;controls=0" 
+            referrerpolicy="strict-origin-when-cross-origin"
+            allowfullscreen>
+        </iframe>
+        </div>
+    </div>
+
+<!-- My Idol -->
+    <div class="Idol">
+        <h2>My favourite idol/singer</h2>
+        <h3>Hong Kong Fencing Athlete- Cheung Ka Long</h3>
+        <h3>Hong Kong Singer-MC Cheung</h3>
 
 
+
+    </div>
 
 
 

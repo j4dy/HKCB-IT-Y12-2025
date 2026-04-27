@@ -4,11 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="icon" type="image/x-icon" href="rene_photo/megumi.jpg" >
 </head>
 <style>
     body{
         background-color: #f5e6d3;
-    margin: auto;
+        margin:  0 20px 10px;
+        padding: 15px;
+    
         }
 
         /* header */
@@ -74,6 +77,12 @@
             color: #382a22;
             font-size: 30px;
         }
+        div .k {
+            width: 100%;
+            height: 3px;
+            background-color: #82614a;
+            margin-bottom: 10px;
+        }
         .pikachu {
             width: 20%;
             height: 20%    
@@ -99,6 +108,11 @@
 
         }
 
+        a{
+            color: #7a553a;
+            font-weight: bold;
+        }
+
         
 
         /* introduction */
@@ -107,25 +121,45 @@
             text-align: center;
             background-color: #7a553a;
             color: #d6bfa6;
+            border: 30px 0 40px;
+            padding: 5px 0 10px;
         }
 
-        .container {
+        .g {
             display:block;
             position: relative;
             padding-left: 30px;
             margin-bottom: 12px;
             cursor: pointer;
-            font-size: 22px;
             user-select: all;
             
         }
-
-        a{
-            color: #7a553a;
-            font-weight: bold;
-        }
         
+        audio {
+            display: block; 
+            width: 30%;   
+            margin: 20px 35% 10px ;
+            border-radius: 20px;
+            filter: sepia(20%) contrast(150%); 
+        }
 
+        /* Hobbies */
+        #hobb{
+            background-color: #d6bfa6;
+            color: #7a553a;
+           
+            
+        }
+
+        #hobb h2{
+            margin: 20px;
+            color: #f5e6d3;
+        }
+
+        #hobb p{
+            font-weight: bold;
+            color: #7a553a;
+        }
 
 </style>
 
@@ -147,6 +181,7 @@
         <!-- home page fac character -->
     <div>
         <h2>My fav characters</h2>
+        <div class="k"></div>
         <img class="pikachu" src="rene_photo/Pikachu1.2.jpg" alt="pikachu">
         <img class="megumi" src="rene_photo/megumi.jpg" alt="megumi">
         <img class="yuji" src="rene_photo/yuji.jpg" alt="yuji">
@@ -156,10 +191,20 @@
             click the link below:
         </p>
 
+        <ul>
         <a href="https://www.youtube.com/watch?v=Che0vTLHKsc"
         target="_blank">
             pikachu video
-        </a>
+        </a> 
+        </ul>
+        <ul>
+         <a href="https://youtu.be/i5VVLIqHmd4?si=Topza1ReN-h-Klic"
+        target="_blank">
+            megumi video
+        </a> 
+        </ul>
+
+        
 
         
     </div>
@@ -168,21 +213,54 @@
         <h2>My Introduction</h2>
         <p>I am rene , i am currently studying IAL in HKBC. bla bla bla </p>
 
-        <label class="container">one
+        <p>
+            press the below button and play the musics while viewing my webpage ^v^
+        </p>
+    
+
+        <audio controls>
+            <source src="rene_photo/pikachu-funny-mobpage-com-52447.mp3"  
+           type="audio/mpeg" > 
+        </audio>
+</div>
+
+    <div id="hobb">
+
+        <h2>Hobbies</h2>
+        <p>What hobbies or acitivities u do during lesiure time?s</p>
+
+        <ul>
+            <li>
+                <label class="g">read books
             <input type="checkbox" checked="checked">
                 <span class="checkmark"></span>
+                </li>
             </input>
         </label>
-        <p>you can play the musics while viewing my webpage ^v^</p>
-    </div>
 
-    <div>
-        <h2>Hobbies</h2>
+            <li>
+                <label class="g">watch tv
+            <input type="checkbox" checked="checked">
+                <span class="checkmark"></span>
+                </li>
+            </input>
+        </label>
 
-    </div>
+         <li>
+                <label class="g">play pc game
+            <input type="checkbox" checked="checked">
+                <span class="checkmark"></span>
+                </li>
+            </input>
+        </label>
+    </ul>
 
     <a href="https://www.youtube.com/watch?v=lQQcmjns-S8">peppa pig</a> 
     <a href="c:\Users\Y12\Downloads\pikachu reaction.jfif">photo</a>
+
+
+
+       </div>
 
 </body>
 </html>

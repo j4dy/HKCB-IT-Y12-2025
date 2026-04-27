@@ -99,30 +99,6 @@ body {
         text-align: center;
     }
 
-    .video-container {
-        position: relative;
-        padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
-        height: 0;
-        overflow: hidden;
-    }
-
-    .video-container iframe {
-        position: absolute;
-        top: 0;
-        left: 5%;
-        right: 5%;
-        width: 90%;
-        height: 90%;
-    }
-
-    iframe {
-        border-radius: 12px;
-        box-shadow: 0 4px 15px rgba(0,0,0,0.3);
-        width: 100%;
-        aspect-ratio: 16 / 9;
-        height: auto;
-    }
-
     .idol {
         background-color: aliceblue;
     }
@@ -149,7 +125,7 @@ body {
         <div>
             <nav>
         <ul>
-            <li><a href="">SU members</a></li>
+            <li><a href="">Home Page</a></li>
             <li><a href="">Interest</a></li>
             <li><a href="">My Role Model</a></li>
             <li><a href="">Footer</a></li>
@@ -167,9 +143,11 @@ body {
     <div class="interest">
         <h2>My Interest</h2>
         <p>One of my biggest interest...SOFTBALL! <br>
-           One of my competition video:</p>
+           A teaching video:</p>
         <div class="video-container">
-            
+            <video poster="jackie's/Softball-01.webp" controls>
+                <source src="jackie's/softball.mp4" type="video/mp4">
+            </video>
         </div>
     </div>
 

@@ -1,10 +1,12 @@
 <!DOCTYPE html>
 <html lang="zh-Hant">
-<display:flex>
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hinson, The King Of Snake & Velocity</title>
+    <title>Hinson, The King Of Velocity</title>
+    <!-- 請確保圖片檔名正確，建議將圖片移到 HTML 同資料夾並使用相對路徑 -->
+    <link rel="icon" type="image/png" href="photo/Adobe_Express_file.png">
+    
     <style>
         /* 背景流動動畫 */
         @keyframes gradientBG {
@@ -67,7 +69,6 @@
             transition: transform 0.3s ease;
         }
 
-        /* 容器滑動位移感 */
         .container:hover {
             transform: translateY(-5px);
         }
@@ -92,7 +93,6 @@
             letter-spacing: 1px;
         }
 
-        /* 更有生命力的 Event Tag */
         .event-tag {
             background-color: rgba(0, 64, 128, 0.5);
             padding: 15px;
@@ -100,11 +100,10 @@
             margin-top: 15px;
             border-radius: 4px;
             position: relative;
-            overflow: hidden; /* 為了隱藏流光 */
+            overflow: hidden;
             transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
         }
 
-        /* 流光效果 */
         .event-tag::after {
             content: "";
             position: absolute;
@@ -118,7 +117,6 @@
             background-color: rgba(0, 74, 153, 0.7);
             border-left-width: 10px;
             padding-left: 20px;
-            box-shadow: 0 0 15px rgba(51, 153, 255, 0.4);
         }
 
         .event-tag p { margin: 8px 0; }
@@ -132,13 +130,31 @@
             color: #80bfff;
             border: 1px inset #003366;
             margin-top: 10px;
-            position: relative;
-            transition: border 0.3s;
         }
 
-        .phonetic-box:hover {
+        /* --- BACK BUTTON STYLE --- */
+        .back-btn {
+            display: block;
+            width: fit-content;
+            margin: 25px auto 0;
+            padding: 10px 30px;
+            background: transparent;
+            color: #3399ff;
             border: 1px solid #3399ff;
-            box-shadow: inset 0 0 10px rgba(51, 153, 255, 0.2);
+            border-radius: 30px;
+            text-decoration: none;
+            font-size: 0.9rem;
+            font-weight: bold;
+            letter-spacing: 2px;
+            transition: all 0.3s ease;
+            text-align: center;
+        }
+
+        .back-btn:hover {
+            background: #3399ff;
+            color: #ffffff;
+            box-shadow: 0 0 20px #3399ff;
+            transform: scale(1.1);
         }
 
         .ai-section {
@@ -165,8 +181,7 @@
         <p class="highlight">🚀 Upcoming Events:</p>
         <div class="event-tag">
             <p>IGCSE ICT Paper 1: <strong>May 7</strong></p>
-            <p>IAL Math Pure 1: <strong>May 8</strong></p>
-            <p>IAL Physics Unit 1: <strong>May 8</strong></p>
+            <p>IAL Math & Physics: <strong>May 8</strong></p>
             <p>IGCSE ICT Paper 2: <strong>Early June</strong></p>
             <p>IELTS: <strong>Summer Holidays</strong></p>
         </div>
@@ -177,13 +192,15 @@
     <div class="section">
         <p>I love using the <span class="highlight">Phonetic Alphabet</span>.</p>
         <div class="phonetic-box">
-            Alpha - Bravo - Charlie - Delta... <br>
-            [ SYSTEM: GO LEARN IT URSELF ]
+            Alpha - Bravo - Charlie - Delta... GO LEARN IT URSELF MOTHERF<br>
         </div>
     </div>
 
+    <!-- 這裡修改 href="你的檔案名稱.html" -->
+    <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" class="back-btn">← BACK TO MENU</a>
+
     <div class="ai-section">
-        <p>SYSTEM STATUS: <span style="color:#00ff00;">ONLINE</span> // BY GEMINI</p>
+        <p>SYSTEM STATUS: <span style="color:#00ff00;">ONLINE</span></p>
     </div>
 </div>
 
@@ -234,5 +251,4 @@
     animate();
 </script>
 </body>
-</display:flex>
 </html>

@@ -10,6 +10,7 @@
     body{
         background-color: #f5e6d3;
     margin: auto;
+    
         }
 
         /* header */
@@ -100,6 +101,11 @@
 
         }
 
+        a{
+            color: #7a553a;
+            font-weight: bold;
+        }
+
         
 
         /* introduction */
@@ -108,32 +114,44 @@
             text-align: center;
             background-color: #7a553a;
             color: #d6bfa6;
+            border: 30px 0 40px;
+            padding: 5px 0 10px;
         }
 
-        .container {
+        .g {
             display:block;
             position: relative;
             padding-left: 30px;
             margin-bottom: 12px;
             cursor: pointer;
-            font-size: 22px;
             user-select: all;
             
-        }
-
-        a{
-            color: #7a553a;
-            font-weight: bold;
         }
         
         audio {
             display: block; 
             width: 30%;   
-            margin: 20px 0;
+            margin: 20px 35% 10px ;
             border-radius: 20px;
             filter: sepia(20%) contrast(150%); 
         }
 
+        /* Hobbies */
+        #hobb{
+            background-color: #d6bfa6;
+            color: #7a553a;
+            
+        }
+
+        #hobb h2{
+            margin: 20px;
+            color: #f5e6d3;
+        }
+
+        #hobb p{
+            font-weight: bold;
+            color: #7a553a;
+        }
 
 </style>
 
@@ -176,26 +194,62 @@
         <h2>My Introduction</h2>
         <p>I am rene , i am currently studying IAL in HKBC. bla bla bla </p>
 
-        <label class="container">one
-            <input type="checkbox" checked="checked">
-                <span class="checkmark"></span>
-            </input>
-        </label>
-        <p>press to play the musics while viewing my webpage ^v^</p>
+        <p>
+            press the below button and play the musics while viewing my webpage ^v^
+        </p>
     
 
         <audio controls>
-            <source src="rene_photo/pikachu-funny-mobpage-com-52447.mp3"  autoplay loop >
+            <source src="rene_photo/pikachu-funny-mobpage-com-52447.mp3"  
+           type="audio/mpeg" > 
         </audio>
 </div>
 
-    <div>
-        <h2>Hobbies</h2>
+    <div id="hobb">
 
-    </div>
+        <h2>Hobbies</h2>
+        <p>What hobbies or acitivities u do during lesiure time?s</p>
+
+        <ul>
+            <li>
+                <label class="g">read books
+            <input type="checkbox" checked="checked">
+                <span class="checkmark"></span>
+                </li>
+            </input>
+        </label>
+
+            <li>
+                <label class="g">watch tv
+            <input type="checkbox" checked="checked">
+                <span class="checkmark"></span>
+                </li>
+            </input>
+        </label>
+
+         <li>
+                <label class="g">play pc game
+            <input type="checkbox" checked="checked">
+                <span class="checkmark"></span>
+                </li>
+            </input>
+        </label>
+    </ul>
+
+
+
+
+
+
+    
 
     <a href="https://www.youtube.com/watch?v=lQQcmjns-S8">peppa pig</a> 
     <a href="c:\Users\Y12\Downloads\pikachu reaction.jfif">photo</a>
+
+
+
+       </div>
+
 
 </body>
 </html>

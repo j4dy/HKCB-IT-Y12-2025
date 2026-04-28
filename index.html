@@ -71,6 +71,30 @@
             color: #777;
         }
 
+        .blaa{
+            background: #e3d5ca;
+            border: 1px solid #ffffff;
+            padding: 20px;
+            border-radius: 8px;
+            text-align: center;
+            text-decoration: none;
+            color: var(--primary-color);
+            transition: transform 0.2s, box-shadow 0.2s;
+            
+        }
+
+        .blaa:hover{
+            transform: translateY(-5px);
+            box-shadow: 0 6px 12px rgba(0,0,0,0.1);
+            border-color: var(--accent-color);
+            background: linear-gradient(#d9a7a4, #fafafa );
+        }
+        .blaa-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+            gap: 20px;
+        }
+
         .caard{
             background: #fff;
             border: 1px solid #ddd;
@@ -130,7 +154,7 @@
             <a href="personal/jackie.html" class="student-card">
                 <h3>Jackie</h3>
             </a>
-            <a href="personal/rene.html" class="student-card">
+            <a href="personal/rene.html" class="blaa">
                 <h3>rene</h3>
             </a>
 

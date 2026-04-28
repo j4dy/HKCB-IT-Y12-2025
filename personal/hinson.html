@@ -5,32 +5,33 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hinson, The King Of Velocity</title>
-    <!-- 請確保圖片檔名正確，建議將圖片移到 HTML 同資料夾並使用相對路徑 -->
     
     <style>
-        /* 背景流動動畫 */
         @keyframes gradientBG {
             0% { background-position: 0% 50%; }
             50% { background-position: 100% 50%; }
             100% { background-position: 0% 50%; }
         }
 
-        /* 容器浮現動畫 */
         @keyframes fadeInUp {
             from { opacity: 0; transform: translateY(30px); }
             to { opacity: 1; transform: translateY(0); }
         }
 
-        /* 掃描流光動畫 */
         @keyframes scanLight {
             0% { left: -100%; }
             50%, 100% { left: 100%; }
         }
 
-        /* 標題發光效果 */
         @keyframes titleGlow {
             0%, 100% { text-shadow: 0 0 10px #3399ff, 0 0 20px #3399ff; }
             50% { text-shadow: 0 0 25px #99ccff, 0 0 40px #0073e6; }
+        }
+
+        /* 星雲脈衝效果 */
+        @keyframes nebulaPulse {
+            0%, 100% { filter: blur(40px) opacity(0.5); transform: scale(1); }
+            50% { filter: blur(60px) opacity(0.8); transform: scale(1.1); }
         }
 
         body {
@@ -54,23 +55,50 @@
             z-index: -1; pointer-events: none;
         }
 
+        /* --- 容器後方的銀河發光層 --- */
+        .galaxy-glow {
+            position: absolute;
+            width: 400px;
+            height: 400px;
+            background: radial-gradient(circle, #3399ff 0%, transparent 70%);
+            filter: blur(50px);
+            z-index: 0;
+            opacity: 0.4;
+            animation: nebulaPulse 4s ease-in-out infinite;
+            pointer-events: none;
+        }
+
         .container {
             background-color: rgba(0, 43, 85, 0.85);
             padding: 30px;
             border-radius: 16px;
             max-width: 500px;
             width: 100%;
-            border: 1px solid #0059b3;
+            /* 邊框顏色固定為 #3399ff */
+            border: 2px solid #3399ff; 
             box-shadow: 0 10px 30px rgba(0,0,0,0.5);
             backdrop-filter: blur(10px); 
             animation: fadeInUp 1s ease-out;
             position: relative;
             z-index: 1;
-            transition: transform 0.3s ease;
+            transition: all 0.4s ease;
         }
 
+        /* --- 懸停時的強化發光 --- */
         .container:hover {
-            transform: translateY(-5px);
+            transform: translateY(-8px);
+            cursor: pointer;
+            /* 強化邊框與陰影的 #3399ff 發光感 */
+            border-color: #3399ff;
+            box-shadow: 0 0 25px rgba(51, 153, 255, 0.6), 
+                        0 0 50px rgba(51, 153, 255, 0.4);
+        }
+
+        /* 當容器被懸停時，讓後方的星雲變亮 */
+        .container:hover + .galaxy-glow {
+            opacity: 0.9;
+            transform: scale(1.3);
+            filter: blur(40px);
         }
 
         h1 {
@@ -101,7 +129,7 @@
             border-radius: 4px;
             position: relative;
             overflow: hidden;
-            transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            transition: 0.3s;
         }
 
         .event-tag::after {
@@ -116,10 +144,7 @@
         .event-tag:hover {
             background-color: rgba(0, 74, 153, 0.7);
             border-left-width: 10px;
-            padding-left: 20px;
         }
-
-        .event-tag p { margin: 8px 0; }
 
         .phonetic-box {
             background: rgba(0, 13, 26, 0.7);
@@ -132,21 +157,24 @@
             margin-top: 10px;
         }
 
-        /* --- BACK BUTTON STYLE --- */
+        .btn-group {
+            display: flex;
+            gap: 15px;
+            justify-content: center;
+            margin-top: 25px;
+        }
+
         .back-btn {
-            display: block;
-            width: fit-content;
-            margin: 25px auto 0;
-            padding: 10px 30px;
+            flex: 1;
+            padding: 10px 15px;
             background: transparent;
             color: #3399ff;
             border: 1px solid #3399ff;
             border-radius: 30px;
             text-decoration: none;
-            font-size: 0.9rem;
+            font-size: 0.85rem;
             font-weight: bold;
-            letter-spacing: 2px;
-            transition: all 0.3s ease;
+            transition: 0.3s;
             text-align: center;
         }
 
@@ -154,7 +182,6 @@
             background: #3399ff;
             color: #ffffff;
             box-shadow: 0 0 20px #3399ff;
-            transform: scale(1.1);
         }
 
         .ai-section {
@@ -162,7 +189,6 @@
             font-size: 0.8rem;
             text-align: center;
             opacity: 0.7;
-            letter-spacing: 2px;
         }
     </style>
 </head>
@@ -170,6 +196,7 @@
 
 <canvas id="starfield"></canvas>
 
+<!-- 內容容器 -->
 <div class="container">
     <div class="section">
         <h1>Hinson - "The King Of Velocity"</h1>
@@ -196,16 +223,18 @@
         </div>
     </div>
 
-    <!-- 這裡修改 href="你的檔案名稱.html" -->
-    <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" class="back-btn">← BACK TO MENU</a>
-    <!-- 這裡修改 href="你的檔案名稱.html" -->
-    <a href="file:///C:/Users/Y12/Documents/GitHub/HKCB-IT-Y12-2025/index.html" class="back-btn">NEXT PAGE →</a>
-
+    <div class="btn-group">
+        <a href="https://www.youtube.com/watch?v=QDia3e12czc" class="back-btn">← MENU</a>
+        <a href="../index.html" class="back-btn">NEXT PAGE →</a>
+    </div>
 
     <div class="ai-section">
-        <p>SYSTEM STATUS: <span style="color:#00ff00;">ONLINE</span> BY GEMINI</p>
+        <p>SYSTEM STATUS: <span style="color:#00ff00;">ONLINE<p>MADE BY GEMINI</p></span></p>
     </div>
 </div>
+
+<!-- 放置在 container 後方的星雲 -->
+<div class="galaxy-glow"></div>
 
 <script>
     const canvas = document.getElementById('starfield');
@@ -239,8 +268,7 @@
 
     function setup() {
         resize();
-        stars = [];
-        for (let i = 0; i < 200; i++) stars.push(new Star());
+        stars = Array.from({length: 200}, () => new Star());
     }
 
     function animate() {
@@ -250,8 +278,7 @@
     }
 
     window.addEventListener('resize', setup);
-    setup();
-    animate();
+    setup(); animate();
 </script>
 </body>
 </html>

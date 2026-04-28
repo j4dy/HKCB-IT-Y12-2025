@@ -300,6 +300,10 @@
 
         display: block;
 
+        background-color: #003366; 
+        border: 2px solid #3399ff; 
+
+
         background-color: #003366; /* 藍色背景 */
 
         border: 2px solid #3399ff; /* 亮藍色邊框 */
@@ -313,6 +317,24 @@
         text-decoration: none;
 
         color: white;
+
+        transition: all 0.3s ease; /* 讓變化更平滑 */
+    }
+
+    /* 滑鼠懸停時：全藍發光效果 */
+    #hinson-box:hover {
+        background-color: #0073e6; /* 變成更亮的藍色 */
+        border-color: #ffffff;    /* 邊框變白增加對比 */
+        transform: scale(1.05);   
+        
+        /* 核心發光效果：多層藍色光影 */
+        box-shadow: 0 0 20px #0073e6, 
+                    0 0 40px #0073e6, 
+                    0 0 60px rgba(0, 115, 230, 0.5);
+    }
+
+    #hinson-box h3, #hinson-box h4 {
+
 
         transition: transform 0.2s;
 
@@ -332,9 +354,18 @@
 
     #hinson-box h3 {
 
+
         margin: 0;
 
         color: #99ccff;
+
+        transition: color 0.3s ease;
+    }
+
+    /* 懸停時文字也稍微變亮 */
+    #hinson-box:hover h3, #hinson-box:hover h4 {
+        color: #ffffff;
+
 
     }
 
@@ -344,17 +375,27 @@
 
         color: #99ccff;
 
+
     }
 
 </style>
 
 
+<!-- 你的專屬藍色盒子 -->
+
+
 
 <!-- 你的專屬藍色盒子：加入了 id="hinson-box" -->
+
 
 <a href="personal/hinson.html" class="student-card" id="hinson-box">
 
     <h3>Hinson</h3>
+
+    <h4>Click to enter</h4>
+</a>
+
+
 
     <p><h4>Click to enter</h4></p>
 
@@ -363,6 +404,7 @@
 
 
             </a>
+
 
 
 

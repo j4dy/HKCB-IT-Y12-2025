@@ -142,45 +142,49 @@
                 <h3>Isaac</h3>
             </a>
 <style>
-
-    
-
-
-    /* 這是專屬於你的藍色盒子樣式 */
+    /* 這是你的藍色盒子基礎樣式 */
     #hinson-box {
         display: block;
-        background-color: #003366; /* 藍色背景 */
-        border: 2px solid #3399ff; /* 亮藍色邊框 */
+        background-color: #003366; 
+        border: 2px solid #3399ff; 
         border-radius: 12px;
         padding: 20px;
         margin: 15px 0;
         text-decoration: none;
         color: white;
-        transition: transform 0.2s;
+        transition: all 0.3s ease; /* 讓變化更平滑 */
     }
 
+    /* 滑鼠懸停時：全藍發光效果 */
     #hinson-box:hover {
-        background-color: #004080;
-        transform: scale(1.05); /* 稍微放大 */
+        background-color: #0073e6; /* 變成更亮的藍色 */
+        border-color: #ffffff;    /* 邊框變白增加對比 */
+        transform: scale(1.05);   
+        
+        /* 核心發光效果：多層藍色光影 */
+        box-shadow: 0 0 20px #0073e6, 
+                    0 0 40px #0073e6, 
+                    0 0 60px rgba(0, 115, 230, 0.5);
     }
 
-    #hinson-box h3 {
+    #hinson-box h3, #hinson-box h4 {
         margin: 0;
         color: #99ccff;
+        transition: color 0.3s ease;
     }
-    #hinson-box h4 {
-        margin: 0;
-        color: #99ccff;
+
+    /* 懸停時文字也稍微變亮 */
+    #hinson-box:hover h3, #hinson-box:hover h4 {
+        color: #ffffff;
     }
 </style>
 
-<!-- 你的專屬藍色盒子：加入了 id="hinson-box" -->
+<!-- 你的專屬藍色盒子 -->
 <a href="personal/hinson.html" class="student-card" id="hinson-box">
     <h3>Hinson</h3>
-    <p><h4>Click to enter</h4></p>
+    <h4>Click to enter</h4>
 </a>
 
-            </a>
 
             <a href="personal/bobo.html" class="student-card">
                 <h3>bobo :D!!</h3>

@@ -14,6 +14,16 @@ body {
         margin: 20px;
     }
 
+/* Audio */
+    #my-music {
+        width: 100%;
+        max-width: 400px;
+        border-radius: 50px;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        margin: 20px auto;
+        display: block;
+    }
+
 /* Header */
     header {
         text-align: center;
@@ -107,8 +117,14 @@ body {
         text-align: center;
     }
 
-    .kalong {
-        background-color: #DFF2FF;
+   video {
+    /* Sets the overall shape of the video element */
+    aspect-ratio: 16 / 9; 
+    width: 60%;
+    height: auto;
+
+    /* Ensures the poster image fills the container without distortion */
+    object-fit: cover; 
     }
 
 </style>
@@ -121,11 +137,18 @@ body {
         </header>
     </div>
 
+<!--Audio-->
+    <audio controls id="my-music">
+        <source src="jackie/MISAMO Confetti Music Video.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+    <p><i>your bg music^^</i></p>
+
 <!-- Navigation -->
         <div>
             <nav>
         <ul>
-            <li><a href="">Home Page</a></li>
+            <li><a href="c:\Users\Y12\Documents\GitHub\HKCB-IT-Y12-2025\index.html">Home Page</a></li>
             <li><a href="">Interest</a></li>
             <li><a href="">My Role Model</a></li>
             <li><a href="">Footer</a></li>
@@ -135,8 +158,8 @@ body {
 <!-- Photo -->
      <div>
         <h3>2 fav cartoon characters</h3>
-       <img class=snoopy src="jackie's/snoopyjpg.jpg" alt="Snoopy">
-       <img class=pooh src="jackie's/poohpooh.jpg" alt="PoohPooh">
+       <img class=snoopy src="jackie/snoopyjpg.jpg" alt="Snoopy">
+       <img class=pooh src="jackie/poohpooh.jpg" alt="PoohPooh">
     </div>  
 
 <!-- Interest -->
@@ -145,8 +168,15 @@ body {
         <p>One of my biggest interest...SOFTBALL! <br>
            A teaching video:</p>
         <div class="video-container">
-            <video poster="jackie's/Softball-01.webp" controls>
-                <source src="jackie's/softball.mp4" type="video/mp4">
+            <video poster="jackie/Softball-01.webp" controls>
+                <source src="jackie/softball.mp4" type="video/mp4">
+            </video>
+        </div>
+        <p>PIANO!I'm at grade 5 now~ <br>
+           Example: Canon in D</p>
+        <div class="video-container">
+            <video poster="jackie/piano.jpg" controls>
+                <source src="jackie/Canon in D.mp4" type="video/mp4">
             </video>
         </div>
     </div>
@@ -154,21 +184,18 @@ body {
 <!-- My Idol -->
     <div class="idol">
             <h2>My favourite Role Model</h2>
-        <div class="kalong">
+        <div>
             <h3>Hong Kong Fencing Athlete- Cheung Ka Long</h3>
-            <p>A competition video of Ka Long</p>
-        <div class="iframe-container">
-            <iframe width="560" height="315" 
-            src="https://www.youtube.com/embed/wPfC7oAXOE4?si=IZ2rG0k2ZQ3aoEHZ" 
-            title="YouTube video player" 
-            frameborder="0" 
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-            referrerpolicy="strict-origin-when-cross-origin" 
-            allowfullscreen></iframe>
-        </div>
+            <p>He has a strong mantility and I like his mindset. <br>
+                A competition video of Ka Long</p>
+            <div class="video-container">
+            <video poster="jackie/ckl.jpg" controls>
+                <source src="jackie/Tokyo 2021 Cheung (HKG).mp4" type="video/mp4">
+            </video>
         </div>
         <h3>Hong Kong Singer-MC Cheung</h3>
-
+        <p>He is one of my favourite singer. <br>
+           He is a great voices and he is very talented.</p>
 
 
     </div>

@@ -147,6 +147,33 @@ body {
     color: #000;
     text-decoration: underline;
     }
+
+/* Styling the floating button */
+    .floating-btn {      
+        position: fixed;         
+        /* Keeps the button in a fixed position on the screen */      
+        bottom: 30px;                
+        right: 30px;                
+        width: 60px;                
+        height: 60px;               
+        background-color: #e0e0e0;       
+        color: rgb(73, 73, 73);                
+        border-radius: 50%;        
+        display: flex;             
+        align-items: center;      
+        justify-content: center;      
+        text-decoration: none;        
+        font-size: 12px;           
+        font-weight: bold;     
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+        z-index: 1000;              
+        transition: all 0.3s ease-in-out;    }    
+        
+        /* Hover effect */    
+        .floating-btn:hover {      
+            background-color: #e2e2e2;     
+            transform: scale(1.1);    
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);}
     
 </style>
 <body>
@@ -154,6 +181,9 @@ body {
 <!-- Header -->
     <div>
         <header>
+            <a href="c:\Users\Y12\Documents\GitHub\HKCB-IT-Y12-2025\index.html" class="floating-btn">
+                <span class="floating-btn">To home page</span>
+            </a>
             <h1>About me</h1>
         </header>
     </div>

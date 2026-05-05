@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>bobo.html</title>
-    <link rel="icon" href="bobo/favicon.png" type="image/png">
+    <link rel="icon" href="bobo/favicon3.webp" type="image/webp">
 
     <style>
        
@@ -296,6 +296,100 @@
         box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);    } 
 
         
+
+
+
+
+
+
+
+
+    /* 播放栏主体 */
+.music-player-bar {
+    position: fixed;
+    bottom: 20px; /* 距离底部一点距离，更有悬浮感 */
+    left: 50%;
+    transform: translateX(-50%);
+    width: 90%;
+    max-width: 800px;
+    background: rgba(255, 255, 255, 0.75); /* 半透明白色 */
+    backdrop-filter: blur(15px); /* 毛玻璃模糊核心 */
+    -webkit-backdrop-filter: blur(15px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 20px;
+    padding: 10px 25px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15);
+    z-index: 9999; /* 确保在最上层 */
+}
+
+/* 内容布局 */
+.player-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+/* 左侧信息栏 */
+.song-meta {
+    display: flex;
+    align-items: center;
+    flex-shrink: 0;
+}
+
+.player-album-art {
+    width: 50px;
+    height: 50px;
+    border-radius: 8px;
+    object-fit: cover;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    margin-right: 15px;
+}
+
+.song-details {
+    display: flex;
+    flex-direction: column;
+}
+
+.song-title {
+    font-weight: bold;
+    font-size: 14px;
+    color: #333;
+}
+
+.artist-name {
+    font-size: 12px;
+    color: #666;
+    margin-top: 2px;
+}
+
+/* 播放器样式微调 */
+.audio-wrapper {
+    flex-grow: 1;
+}
+
+audio {
+    width: 100%;
+    height: 35px; /* 让高度更窄更精致 */
+}
+
+/* 适配手机端 */
+@media (max-width: 600px) {
+    .song-details {
+        display: none; /* 手机端空间不足时隐藏文字 */
+    }
+    .music-player-bar {
+        bottom: 10px;
+        padding: 8px 15px;
+    }
+}
+
+
+
+
+
+
+
     </style>
 </head>
 <body>
@@ -406,6 +500,30 @@ function closeImage() {
 <div id="image-overlay" onclick="closeImage()">
     <img id="enlarged-img" src="" alt="Enlarged View">
 </div>
+
+
+
+
+<!-- 音乐播放栏容器 -->
+<div class="music-player-bar">
+    <div class="player-content">
+        <!-- 左侧：封面与信息 -->
+        <div class="song-meta">
+            <img src="bobo/Goodluckbabe.webp" alt="dahlia" class="player-album-art">
+            <div class="song-details">
+                <span class="song-title">Good Luck, Babe!</span>
+                <span class="artist-name">Chappell Roan</span>
+            </div>
+        </div>
+
+        <!-- 右侧：原生播放器 -->
+        <div class="audio-wrapper">
+            <audio controls>
+                <source src="bobo/chappell roan - good Luck Babe.mp3" type="audio/mp3">
+                
+            </audio>
+            
+        </div>
 
 
 

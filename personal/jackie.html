@@ -40,6 +40,32 @@ body {
         display: block;
     }
 
+/* AI */
+    .car {
+        height: 30%;
+        width: 30%;
+        border-radius: 50%;
+    }
+
+/* Spin */
+    .spinner {
+        width: 50px;
+        height: 50px;
+        border: 5px solid #f3f3f3; /* Light grey background border */
+        border-top: 5px solid #3498db; /* Blue spinning border */
+        border-radius: 50%; /* Makes it a circle */
+        
+        /* Applying the animation */
+        animation: spin 2s linear infinite;
+    }
+
+/* Defining the spin animation */
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+
 /* Navigation */
     nav {
         background-color: rgba(162, 167, 241, 0.151);
@@ -127,14 +153,64 @@ body {
     object-fit: cover; 
     }
 
+/* Footer */
+    footer {
+    color: #555;
+    text-decoration: none; /* Removes the underline */
+    margin: 0 10px;
+    text-align: center;
+    }
+
+    /* Add a hover effect */
+    footer:hover {
+    color: #000;
+    text-decoration: underline;
+    }
+
+/* Styling the floating button */
+    .floating-btn {      
+        position: fixed;         
+        /* Keeps the button in a fixed position on the screen */      
+        bottom: 30px;                
+        right: 30px;                
+        width: 60px;                
+        height: 60px;               
+        background-color: #e0e0e0;       
+        color: rgb(73, 73, 73);                
+        border-radius: 50%;        
+        display: flex;             
+        align-items: center;      
+        justify-content: center;      
+        text-decoration: none;        
+        font-size: 12px;           
+        font-weight: bold;     
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+        z-index: 1000;              
+        transition: all 0.3s ease-in-out;    }    
+        
+        /* Hover effect */    
+        .floating-btn:hover {      
+            background-color: #e2e2e2;     
+            transform: scale(1.1);    
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);}
+    
 </style>
 <body>
 
 <!-- Header -->
     <div>
         <header>
+            <a href="..\index.html" class="floating-btn">
+                <span class="floating-btn">To home page</span>
+            </a>
             <h1>About me</h1>
         </header>
+    </div>
+
+<!-- AI Photo -->
+    <div>
+        <img class="car" src="jackie/cartoon girl.png" alt="jackie">
+
     </div>
 
 <!--Audio-->
@@ -149,9 +225,9 @@ body {
             <nav>
         <ul>
             <li><a href="c:\Users\Y12\Documents\GitHub\HKCB-IT-Y12-2025\index.html">Home Page</a></li>
-            <li><a href="">Interest</a></li>
-            <li><a href="">My Role Model</a></li>
-            <li><a href="">Footer</a></li>
+            <li><a href="https://zh.wikipedia.org/wiki/%E5%A3%98%E7%90%83">Softball</a></li>
+            <li><a href="https://zh.wikipedia.org/wiki/TWICE">TWICE</a></li>
+            <li><a href="#footer">Footer</a></li>
         </ul>
             </nav>
 
@@ -215,6 +291,12 @@ body {
         </div>
     </div>
 
+<!-- Footer -->
+    <footer id="footer">
+        <p><i><small>jackie2026</small></i></p>
+    </footer>
+
+    <div class="spinner"></div>
 
 
     

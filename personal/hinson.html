@@ -7,6 +7,19 @@
     <title>Hinson, The King Of Velocity</title>
     
     <style>
+        .floating-btn {      
+            position: fixed;         /* Keeps the button in a fixed position on the screen */      
+            bottom: 30px;           /* 30px distance from the bottom */      right: 30px;            /* 30px distance from the right */      width: 60px;            /* Width of the circle */      
+            height: 60px;           /* Height of the circle */      background-color: #007bff; /* Button color (Blue) */      
+            color: white;           /* Icon or text color */      border-radius: 50%;     /* Makes the button perfectly round */      display: flex;          /* Centers the content inside */      align-items: center;      
+            justify-content: center;      
+            text-decoration: none;  /* Removes underline if using an <a> tag */      
+            font-size: 24px;        /* Size of the icon or text */      font-weight: bold;      
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Adds a subtle shadow */
+            z-index: 1000;          /* Ensures it stays on top of other elements */      
+            transition: all 0.3s ease; /* Smooth hover effect */    }    /* Hover effect */    
+            .floating-btn:hover {      background-color: #0056b3; /* Darker blue on hover */      transform: scale(1.1);    /* Slightly enlarges the button */      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);    }
+
         @keyframes gradientBG {
             0% { background-position: 0% 50%; }
             50% { background-position: 100% 50%; }
@@ -196,6 +209,7 @@
 
 <canvas id="starfield"></canvas>
 
+<a href="../index.html" class="floating-btn">1</a>
 <!-- 內容容器 -->
 <div class="container">
     <div class="section">
@@ -225,6 +239,7 @@
 
     <div class="btn-group">
         <a href="https://www.youtube.com/watch?v=QDia3e12czc" class="back-btn">← MENU</a>
+        <a href="Hinson/c3bL3.jpg" class="back-btn"> PHOTO </a>
         <a href="../index.html" class="back-btn">NEXT PAGE →</a>
     </div>
 

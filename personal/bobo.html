@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>bobo.html</title>
-    <link rel="icon" href="favicon.png" type="image/png">
+    <link rel="icon" href="bobo/favicon3.webp" type="image/webp">
 
     <style>
        
@@ -13,19 +13,22 @@
         }
 
         body, html {
-            margin: 0;
-            padding: 0;
-            width: 100%;
-            height: 100%;
-            font-family: 'Segoe UI', sans-serif;
-            background: linear-gradient(135deg, #ffe9f0 0%, #ffffff 100%);
-            
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            color: #555;
-            overflow-x: hidden; 
-        }
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    
+    min-height: 100%; 
+    font-family: 'Segoe UI', sans-serif;
+    background: linear-gradient(135deg, #ffe9f0 0%, #ffffff 100%);
+    
+    
+    display: flex;
+    flex-direction: column; 
+    align-items: center;   
+    justify-content: flex-start; 
+    color: #555;
+    overflow-x: hidden; 
+}
 
        
         .top-bar {
@@ -57,17 +60,19 @@
         }
 
         .container {
-            background: rgba(255, 255, 255, 0.7);
-            backdrop-filter: blur(10px);
-            border-radius: 30px;
-            padding: 40px;
-            box-shadow: 0 15px 35px rgba(255, 182, 193, 0.3);
-            max-width: 800px;
-            width: 90%;
-            border: 1px solid rgba(255, 255, 255, 0.8);
-            text-align: center;
-            margin-top: 80px;
-        }
+    background: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(10px);
+    border-radius: 30px;
+    padding: 40px;
+    box-shadow: 0 15px 35px rgba(255, 182, 193, 0.3);
+    max-width: 800px;
+    width: 90%;
+    border: 1px solid rgba(255, 255, 255, 0.8);
+    text-align: center;
+    margin-top: 120px; 
+    margin-bottom: 50px;
+    flex-shrink: 0;
+}
 
         
         .header-section {
@@ -187,6 +192,204 @@
             0%, 70%, 100% { transform: rotate(0deg); }
             85% { transform: rotate(10deg); }
         }
+
+
+
+
+       
+
+.figure-section {
+    margin: 80px auto 40px auto; 
+    padding: 30px;
+    background: rgba(255, 255, 255, 0.6);
+    backdrop-filter: blur(5px);
+    border-radius: 30px;
+    border: 2px dashed #ffb6c1; 
+    max-width: 400px; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 10px 30px rgba(255, 182, 193, 0.2);
+}
+
+.figure-img {
+    width: 250px; 
+    height: auto;
+    border-radius: 15px;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    cursor: pointer;
+}
+
+.figure-img:hover {
+    transform: scale(1.1) rotate(-3deg);
+}
+
+.figure-desc {
+    margin-top: 20px;
+    font-size: 0.95rem;
+    color: #ff9fb2;
+    font-family: 'Comic Sans MS', cursive, sans-serif;
+    letter-spacing: 1px;
+}
+
+#image-overlay {
+    display: none; 
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background-color: rgba(255, 220, 220, 0.8); 
+    z-index: 2000; 
+    justify-content: center;
+    align-items: center;
+    cursor: zoom-out;
+    animation: fadeIn 0.3s ease;
+}
+
+
+#enlarged-img {
+    max-width: 90%;
+    max-height: 90%;
+    border-radius: 15px;
+    box-shadow: 0 0 30px rgba(255, 213, 213, 0.404);
+    transform: scale(0.9);
+    animation: zoomIn 0.3s ease forwards;
+}
+
+
+@keyframes zoomIn {
+    to { transform: scale(1); }
+}
+
+
+.figure-img {
+    cursor: zoom-in;
+}
+
+
+
+
+
+  /* Styling the floating button */    
+  .floating-btn {      
+    position: fixed;         /* Keeps the button in a fixed position on the screen */      
+    bottom: 30px;           /* 30px distance from the bottom */      
+    right: 30px;            /* 30px distance from the right */      
+    width: 60px;            /* Width of the circle */      
+    height: 60px;           /* Height of the circle */      
+    background-color: #ffcace; /* Button color (Blue) */      
+    color: white;           /* Icon or text color */      
+    border-radius: 50%;     /* Makes the button perfectly round */      
+    display: flex;          /* Centers the content inside */      
+    align-items: center;      
+    justify-content: center;      
+    text-decoration: none;  /* Removes underline if using an <a> tag */      
+    font-size: 24px;        /* Size of the icon or text */      
+    font-weight: bold;      
+    box-shadow: 0 4px 8px rgba(255, 199, 199, 0.781); /* Adds a subtle shadow */      
+    z-index: 1000;          /* Ensures it stays on top of other elements */      
+    transition: all 0.3s ease; /* Smooth hover effect */    }    /* Hover effect */    
+    
+    .floating-btn:hover {      
+        background-color: #ffbbc4; /* Darker blue on hover */      
+        transform: scale(1.1);    /* Slightly enlarges the button */      
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);    } 
+
+        
+
+
+
+
+
+
+
+
+    /* 播放栏主体 */
+.music-player-bar {
+    position: fixed;
+    bottom: 20px; /* 距离底部一点距离，更有悬浮感 */
+    left: 50%;
+    transform: translateX(-50%);
+    width: 90%;
+    max-width: 800px;
+    background: rgba(255, 255, 255, 0.75); /* 半透明白色 */
+    backdrop-filter: blur(15px); /* 毛玻璃模糊核心 */
+    -webkit-backdrop-filter: blur(15px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 20px;
+    padding: 10px 25px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15);
+    z-index: 9999; /* 确保在最上层 */
+}
+
+/* 内容布局 */
+.player-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+/* 左侧信息栏 */
+.song-meta {
+    display: flex;
+    align-items: center;
+    flex-shrink: 0;
+}
+
+.player-album-art {
+    width: 50px;
+    height: 50px;
+    border-radius: 8px;
+    object-fit: cover;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    margin-right: 15px;
+}
+
+.song-details {
+    display: flex;
+    flex-direction: column;
+}
+
+.song-title {
+    font-weight: bold;
+    font-size: 14px;
+    color: #333;
+}
+
+.artist-name {
+    font-size: 12px;
+    color: #666;
+    margin-top: 2px;
+}
+
+/* 播放器样式微调 */
+.audio-wrapper {
+    flex-grow: 1;
+}
+
+audio {
+    width: 100%;
+    height: 35px; /* 让高度更窄更精致 */
+}
+
+/* 适配手机端 */
+@media (max-width: 600px) {
+    .song-details {
+        display: none; /* 手机端空间不足时隐藏文字 */
+    }
+    .music-player-bar {
+        bottom: 10px;
+        padding: 8px 15px;
+    }
+}
+
+
+
+
+
+
+
     </style>
 </head>
 <body>
@@ -238,6 +441,10 @@
         <div id="content-display"></div>
     </div>
 
+
+
+
+
     <script>
         const info = {
             1: "Art is my best elective subject. I love drawing with acrylics, watercolors, and colored pencils. I feel like I need to practice more because my drawings are not perfect yet. :(",
@@ -250,6 +457,77 @@
             box.style.display = 'block';
             box.innerText = info[id];
         }
+
+
+
+        
+function openImage(src) {
+    const overlay = document.getElementById('image-overlay');
+    const fullImg = document.getElementById('enlarged-img');
+    overlay.style.display = 'flex';
+    fullImg.src = src;
+    document.body.style.overflow = 'hidden'; 
+}
+
+
+function closeImage() {
+    const overlay = document.getElementById('image-overlay');
+    overlay.style.display = 'none';
+    document.body.style.overflow = 'auto'; 
+}
+        
+        
     </script>
+
+
+
+
+
+<div class="figure-section">
+   
+    <img src="bobo/gemini.png" 
+         class="figure-img" 
+         onclick="openImage(this.src)">
+    <p class="figure-desc">
+        Check out this adorable collectible figure generated with the help of Gemini... ^^!!
+    </p>
+</div>
+
+
+
+
+
+<div id="image-overlay" onclick="closeImage()">
+    <img id="enlarged-img" src="" alt="Enlarged View">
+</div>
+
+
+
+
+<!-- 音乐播放栏容器 -->
+<div class="music-player-bar">
+    <div class="player-content">
+        <!-- 左侧：封面与信息 -->
+        <div class="song-meta">
+            <img src="bobo/Goodluckbabe.webp" alt="dahlia" class="player-album-art">
+            <div class="song-details">
+                <span class="song-title">Good Luck, Babe!</span>
+                <span class="artist-name">Chappell Roan</span>
+            </div>
+        </div>
+
+        <!-- 右侧：原生播放器 -->
+        <div class="audio-wrapper">
+            <audio controls>
+                <source src="bobo/chappell roan - good Luck Babe.mp3" type="audio/mp3">
+                
+            </audio>
+            
+        </div>
+
+
+
+<a href="../index.html" class="floating-btn">Back</a>
+
 </body>
 </html>
